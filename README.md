@@ -25,13 +25,13 @@ Se solicita el modelado y desarrollo de un sistema backend para una red social l
 1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/EP-UnaHur-2026C1/anti-social-documental-tp-aagp.git
+git clone https://github.com/gonnbar/tp2-ciu1c2026-aagp-backend.git
 ```
 
 2. Ingresar al directorio del proyecto:
 
 ```bash
-cd anti-social-documental-tp-aagp
+cd tp2-ciu1c2026-aagp-backend
 ```
 
 3. Instalar las dependencias:
