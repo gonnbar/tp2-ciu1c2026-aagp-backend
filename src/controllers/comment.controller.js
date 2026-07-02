@@ -40,7 +40,7 @@ const crearComentario = async (req, res) => {
         )
             .populate("userId", "nickname")
             .populate("postId", "texto fecha")
-            .select("-createdAt -updatedAt -__v");
+            .select("-updatedAt -__v");
         res.status(201).json(nuevoComentario);
     } catch (error) {
         res.status(500).json({
