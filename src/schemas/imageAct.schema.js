@@ -3,7 +3,6 @@ const Joi = require('joi')
 const imageSchemaAct = Joi.object({
     url: Joi.string()
         .min(1)
-        .max(100)
         .required()
         .messages({
             "string.base": "La url debe de ser texto",

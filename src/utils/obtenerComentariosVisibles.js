@@ -24,7 +24,7 @@ const obtenerComentariosVisibles = async (
     }
 
     const comentarios = await consulta.select(
-        "-createdAt -updatedAt -__v"
+        "-updatedAt -__v"
     );
 
     return comentarios.filter(

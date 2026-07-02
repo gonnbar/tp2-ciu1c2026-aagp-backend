@@ -55,7 +55,7 @@ const crearUser = async (req, res) => {
 
 const actualizarUser = async (req, res) => {
   try {
-    const user = await User.findByIdAndUpdate(req.user._id, req.body, {
+   const user = await User.findByIdAndUpdate(req.user._id, req.body, {
       new: true,
       runValidators: true
     });
@@ -85,7 +85,7 @@ const obtenerPostPorUsuario = async (req, res) => {
     const { id } = req.params;
     const posts = await Post.find({ user: id })
       .populate("tags", "nombre")
-      .select("-createdAt -updatedAt -__v -user");
+      .select("-createdAt -updatedAt -__v");
     const postsConRelaciones = await agregarRelacionesPosts(posts);
     res.status(200).json({
       posts: postsConRelaciones

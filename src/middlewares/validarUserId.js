@@ -4,7 +4,7 @@ const validarUserId = async (req, res, next) => {
   try {
     const id = req.params.id || req.body.user
     const user = await User.findById(id).select(
-      '-password -createdAt -updatedAt -__v'
+      '-createdAt -updatedAt -__v'
     );
     if (!user) {
       return res.status(404).json({ message: 'Usuario no encontrado' })
